@@ -74,7 +74,7 @@ func parse(c *caddy.Controller) (*Loop, error) {
 		}
 
 		if len(c.ServerBlockKeys) > 0 {
-			zone = plugin.Host(c.ServerBlockKeys[0]).Normalize()
+			zone = plugin.Host(c.Key).Normalize()
 		}
 	}
 	return New(zone), nil
